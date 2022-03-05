@@ -17,6 +17,11 @@
     flex-direction: column;
     overflow: scroll;
   }
+  .empty-message{
+    color:grey;
+    font-size: 20px;
+    margin:50px auto;
+  }
 
   button {
     margin-top: auto;
