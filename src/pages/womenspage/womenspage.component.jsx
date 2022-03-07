@@ -4,8 +4,8 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import { selectCollection } from '../../redux/shop/shop.selector';
 
 
-import './hatspage.styles.scss';
-const HatsPage = ({ collection }) => {
+import './womenspage.style.scss';
+const WomensPage = ({ collection }) => {
     const { title, items } = collection;
     return (
         <div className='hats-page'>
@@ -19,7 +19,7 @@ const HatsPage = ({ collection }) => {
     );
 }
 const mapStateToProps = (state) => ({
-    collection:selectCollection('hats')(state)
+    collection:selectCollection('womens')(state)
 })
 
-export default connect(mapStateToProps)(HatsPage);
+export default connect(mapStateToProps)(WomensPage);

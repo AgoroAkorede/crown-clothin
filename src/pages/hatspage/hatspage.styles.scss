@@ -1,0 +1,21 @@
+.hats-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  
+    .title {
+      font-size: 38px;
+      margin: 0 auto 30px;
+    }
+  
+    .items {
+      display: grid;
+      grid-template-columns: 19fr 19fr 19fr;
+      grid-gap: 1px;
+  
+      & .collection-item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  
