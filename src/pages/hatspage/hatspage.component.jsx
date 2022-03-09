@@ -19,7 +19,7 @@ const HatsPage = ({ collection }) => {
     );
 }
 const mapStateToProps = (state) => ({
-    collection:selectCollection('hats')(state)
+    collection:selectCollection("hats")(state)
 })
 
 export default connect(mapStateToProps)(HatsPage);
