@@ -1,10 +1,10 @@
 import React from 'react';
-import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
+
 import { Routes, Route } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux'
 import CollectionPage from '../collection/collection.component'
-import { fetchCollectionsStartAsync } from '../../redux/shop/shop.action';
+import { fetchCollectionsStart } from '../../redux/shop/shop.action';
 import {selectIsCollectionFetching, selectIsCollectionLoaded } from '../../redux/shop/shop.selector';
 
 import WithSpinner from '../../components/with-spinner/with-spinner.component'
@@ -16,8 +16,8 @@ const CollectionsPageWithSpinner= WithSpinner(CollectionPage)
 class ShopPage extends React.Component{ 
 
     componentDidMount() {
-        const { fetchCollectionsStartAsync } = this.props;
-        fetchCollectionsStartAsync();
+        const { fetchCollectionsStart } = this.props;
+        fetchCollectionsStart();
     };
     render() {
         const { isCollectionLoaded } = this.props;
@@ -35,7 +35,7 @@ const mapStateToProps = createStructuredSelector({
     isCollectionLoaded:selectIsCollectionLoaded
 });
 const mapDispatchToProps = dispatch => ({
-    fetchCollectionsStartAsync:()=>dispatch(fetchCollectionsStartAsync())
+    fetchCollectionsStart:()=>dispatch(fetchCollectionsStart())
 })
 
 export default connect(
